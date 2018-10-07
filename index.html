@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script> 
+$(document).ready(function(){
+   $("#first").click(function(){
+       $("#panel2").slideUp("");
+       $("#panel3").slideUp("");
+       $("#panel4").slideUp("");
+       $("#panel").slideToggle("");
+
+    });
+    
+    $("#second").click(function(){
+      $("#panel").slideUp("");
+      $("#panel3").slideUp("");
+      $("#panel4").slideUp("");
+      $("#panel2").slideToggle("");
+    });
+    
+    $("#third").click(function(){
+     $("#panel").slideUp("");
+     $("#panel2").slideUp("");
+     $("#panel4").slideUp("");
+     $("#panel3").slideToggle("");
+    });
+    
+	$("#fourth").click(function() {
+    $('html, body').animate({
+        scrollTop: $("#site-footer").offset().top
+    }, 500);
+});
+	var string = "LOOM";
+var str = string.split("");
+var el = document.getElementById('logo');
+    
+(function animate() {
+
+str.length > 0 ? el.innerHTML += str.shift() : clearTimeout(running); 
+$("#header").animate({
+       top:'90px',
+        opacity:'0.7',
+        height:'150px',
+        width:'150px',
+        margin:'-30px -96px',
+    });
+    
+var running = setTimeout(animate, 100);
+})(); 
+});
+
+    
+   
+  
+</script>
+<style>
+body{   
+box-sizing:border-box;
+background-color:#16FFBD;
+margin:0 auto;
+padding:0;
+}
+#flip{
+    padding:40px;
+    text-align: center; 
+    background-color: #16FFBD;
+	
+}
+#flip li{
+    padding: 25px;
+    text-align: center;
+    display:inline-block;
+	font-size:1.7em;
+	background-color: #16FFBD;
+
+}
+
+#panel,#panel2,#panel3,#panel4 {
+    display: none;
+    position: relative;
+    height:60%;
+    text-align: center;
+	font-size:1.7em;
+}
+
+#one{
+margin:32.5% auto;
+height:80%;
+background-color:#FA407D;
+position: absolute;
+z-index:2;
+width:100%;
+padding:0;
+text-align:center;
+-webkit-clip-path: polygon(0 0, 100% 0%, 100% 47%, 0 48%);
+clip-path: polygon(0 0, 100% 0%, 100% 47%, 0 48%);
+}
+
+#one a{
+text-decoration:none;
+color:black;
+font-size:1.8em;
+margin:0 auto;
+}
+
+#words{
+font-size:1.6em;
+margin-top:50%;
+padding:10%;
+position:absolute;
+z-index:2;
+}
+
+#panel #no1{
+color:white;
+margin:0 auto;
+opacity:1;
+padding: 0;
+height:1200px;
+}
+video {
+  width: 70%    !important;
+  height: auto   !important;
+}
+
+#panel2 #no1 a{
+text-decoration:none;
+color:black;
+}
+
+#no1,#no3{
+color:black;
+background-color: #16FFBD;
+margin:0 auto;
+opacity:1;
+padding:5% 15%;
+line-height:50px;
+height:900px;
+max-width:97%;
+-webkit-clip-path: polygon(0 0, 100% 0%, 100% 47%, 0 48%);
+clip-path: polygon(0 0, 100% 0%, 100% 47%, 0 48%);
+}
+
+#no2{
+color:black;
+background-color: #16FFBD;
+margin:0 auto;
+opacity:1;
+padding:5% 0;
+height:1000px;
+width:97%;
+column-count:3;
+-webkit-clip-path: polygon(0 0, 100% 0%, 100% 47%, 0 48%);
+clip-path: polygon(0 0, 100% 0%, 100% 47%, 0 48%);
+}
+
+.vid1{
+display:inline-block;
+width:21%;
+height:30%;
+margin-right:3px;
+}
+
+.vid1 img{
+width: 100%;
+height: auto;
+}
+#flip #logo{
+padding:20px 80px;
+border:none;
+}
+#header{
+font-size:2em;
+margin-left:-26px;
+position:absolute;
+top:-60px;
+}
+/*---------------------------------------------------------footer style*/
+#site-footer
+{
+  margin-top:75%;
+  background-color:#26272b;
+  padding:65px 0 20px;
+  font-size:2em;
+  line-height:24px;
+  color:#737373;
+  z-index:2;
+  position: absolute;
+  column-count:3;
+  width:100%;
+  height:50%;
+  text-align:justify;
+  color:#FAEDF1;
+ padding-top:10%;
+}
+#site-footer hr
+{
+  border-top-color:#bbb;
+}
+
+#Social_media{
+text-align:center;
+font-size:1em;
+ }
+ 
+#Social_media h3:hover{
+color:#FA407D;
+}
+
+#contact h3:hover{
+color:#FA407D;
+}
+
+#Social_media img{
+width:10%;
+height:10%;         /* Social_media section style */
+}
+#Social_media img:hover{
+background-color:#16FFBD;
+}
+/*-------------------------------------------------------------------------*/
+}
+    .stage {
+        border-bottom: 3px solid #444;
+        display: flex;
+        height: 30%;
+        width: 100%;
+		background-color:white;
+    }
+    .box {
+        align-self: flex-end;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+        background-color: #F44336;
+        height: 30%;
+        margin: 0 auto;
+		margin-top:10%;
+		margin-left:40%;
+        transform-origin: bottom;
+        width:20%;
+		line-height:450px;
+		position:absolute;
+		z-index:-2;
+    }
+	
+	
+	.box span {
+        animation-name: fadeIn;
+        animation-timing-function: ease;
+    }
+    .bounce-5 {
+        animation-name: bounce-5;
+        animation-timing-function: ease;
+    }
+    @keyframes bounce-5 {
+        0%   { transform: scale(1,1)    translateY(0); }
+        10%  { transform: scale(1.1,.9) translateY(0); }
+        30%  { transform: scale(.9,1.1) translateY(-100px); }
+        50%  { transform: scale(1,1)    translateY(0); }
+        57%  { transform: scale(1,1)    translateY(-7px); }
+        64%  { transform: scale(1,1)    translateY(0); }
+        100% { transform: scale(1,1)    translateY(0); }
+    }
+	/*---------------------------------------------------*/
+@media screen and (max-width: 1500px) {
+
+		
+	.box {      
+        height: 11%; 
+		line-height:20px;		
+    }
+	#flip li{
+	font-size:1.3em;
+	padding: 0 3px;
+
+}
+	#flip{
+    padding:0 -10px;
+    text-align: center; 
+    background-color: #16FFBD;
+	
+}
+#one{
+margin:50% auto;
+height:88%;
+font-size:1em;
+text-align:center;
+}	
+
+#words{
+font-size:1.5em;
+margin-top:55%;
+padding:20%;
+position:absolute;
+z-index:2;
+}
+
+#site-footer
+{
+  margin-top:100%;
+  font-size:1.3em;
+  line-height:17px;
+  height:100%;
+  column-count:1;
+  text-align:center;
+}
+#Social_media img{
+width:3.5%;
+height:3.5%;         /* Social_media section style */
+}
+#panel #no1{
+color:white;
+margin:0 auto;
+opacity:1;
+height:900px;
+}
+#no2{
+font-size:.7em;
+}
+}
+	/*---------------------------------------------------*/
+@media screen and (max-width: 990px) {
+
+		
+	.box {      
+        height: 11%; 
+        margin-top:20%;				
+    }
+	#flip li{
+	font-size:1.3em;
+	padding: 0 3px;
+
+}
+	#flip{
+    padding:0 -10px;
+    text-align: center; 
+    background-color: #16FFBD;
+	
+}
+#one{
+margin:60% auto;
+height:65%;
+font-size:.8em;
+text-align:center;
+}	
+
+#words{
+font-size:1.3em;
+margin-top:78%;
+padding:6%;
+line-height:27px;
+position:absolute;
+z-index:2;
+}
+
+#site-footer
+{
+  margin-top:120%;
+  font-size:1em;
+  line-height:17px;
+  height:90%;
+  column-count:1;
+  text-align:center;
+}
+#panel #no1{
+color:white;
+margin:0 auto;
+height:800px;
+opacity:1;
+}
+#no2{
+font-size:.64em;
+}
+}
+	/*---------------------------------------------------*/
+@media screen and (max-width: 768px) {
+
+		
+	.box {      
+        height: 10%; 
+		margin-top:20%;				
+    }
+	#flip li{
+	font-size:1em;
+	padding: 0 3px;
+
+}
+	#flip{
+    padding:0 -10px;
+    text-align: center; 
+    background-color: #16FFBD;
+	
+}
+#one{
+margin:67% auto;
+height:70%;
+font-size:.7em;
+text-align:center;
+}	
+
+.vid1{
+width:21%;
+height:30%;
+margin:0 auto;
+}
+
+#words{
+font-size:1em;
+margin-top:96%;
+padding:10%;
+position:absolute;
+z-index:2;
+}
+
+#site-footer
+{
+  margin-top:150%;
+  font-size:1em;
+  line-height:24px;
+  height:100%;
+  column-count:1;
+  text-align:center;
+}
+#panel,#panel2,#panel3,#panel4 {
+    display: none;
+    position: relative;
+    height:60%;
+    text-align: center;
+	font-size:1.5em;
+}
+.vid1{
+display:inline-block;
+width:28%;
+height:40%;
+margin-right:3px;
+}
+#Social_media img{
+width:6%;
+height:6%;         /* Social_media section style */
+}
+#panel #no1{
+color:white;
+margin:0 auto;
+height:700px;
+
+opacity:1;
+}
+#no2{
+font-size:.65em;
+column-count:3;
+line-height:19px;
+}
+}
+	/*---------------------------------------------------*/
+@media screen and (max-width:480px) {
+
+	.box {      
+        height: 10%; 
+		margin-top:30%;		
+    }	
+
+#one{
+margin:62.5% auto;
+height:45%;
+font-size:0.7em;
+text-align:center;
+}	
+
+#words{
+font-size:1em;
+margin-top:89%;
+padding:10%;
+line-height:20px;
+
+position:absolute;
+z-index:2;
+}
+
+#site-footer
+{
+  margin-top:160%;
+  font-size:1.2em;
+  line-height:19px;
+  height:100%;
+  column-count:1;
+  text-align:center;
+}
+
+#header{
+color:#FA407D;
+font-weight:bold;
+}
+#flip li {
+width:40%;
+margin:0 auto;
+font-weight:bold;
+border-bottom:1px solid #FA407D;
+color:black;
+display:block;
+}
+#flip{
+	padding: 0 3px;	
+
+}
+#Social_media img{
+width:9%;
+height:9%;         /* Social_media section style */
+}
+
+#panel #no1{
+color:white;
+margin:0 auto; 
+height:700px;
+opacity:1;
+}
+
+#no2{
+ display:none;
+}
+}
+
+</style>
+</head>
+<body >
+<div>
+<div id="flip">
+<ul>
+<li id="first">Home</li>
+<li id="second">Work</li>
+<li id="logo"><span id="header">B</span></li>
+<li id="third">About</li>
+<li id="fourth">Contact</li>
+
+</ul>
+</div>
+<!--............................................ logo -->
+
+<div class="container" style="padding:1px 16px; text-align:center; margin:0 auto;">
+<div class="stage">
+    <div class="box bounce-5"><img src="images/logo.jpg" style="width:100%; height:auto;"></div>
+	<span class="fadeIn "></span>
+</div>
+</div>
+<!--............................................ my works -->
+
+<div id="one">
+<a href="wedding-flowers/index.html"><div  class="vid1"><img src="images/1.jpg" width="200" height="200"><br>Wedding</div></a>
+<a href="Resturant/html/index.html"><div  class="vid1"><img src="images/5.jpg" width="200" height="200"><br>Resturante</div></a>
+<a href="flower-zone/home2-1.html"><div  class="vid1"><img src="images/pexels-photo-311458.jpeg" width="200" height="200">Shop</div></a>
+</div>
+<!--............................................ ho I am -->
+<div id="words">
+<P><b>I AM</b> An aspiring, self-motivated website designer with a high self-management ability and ability to work under the least supervision, a good team player capable of developing websites and a fast learner capable of interacting and communicating effectively. Is currently looking for an opportunity to join an ambitious and well-developed company to gain more experience in web design.
+
+
+</div>
+
+<!-- Site footer .......................................................-->
+<footer id="site-footer">
+<div id="Social_media">
+<h3>You Can Find Me On :</h3>
+<br>
+<img src="images/facebook.png">
+<img src="images/instagram.png">
+<img src="images/pinterest.png">
+</div>
+<br>
+<div id="right">
+<div id="contact">
+<br>
+<h3>Phone</h3>
+<span>771-107-888</span>
+<h3>Address</h3>
+<span>Shamlan street ,Sana'a ,Yemen</span>
+<h3>Email</h3>
+<span>faridah.absi@gmail.com</span>
+<h3>Facebook</h3>
+<span>www.facebook.com/faridah.absi</span>
+</div>
+</div>
+</footer>
+<!--***************************************************************-->
+<div id="panel">
+<div id="no1">
+<video  controls>
+  <source src="video/1.mp4" type="video/mp4">
+  <source src="video/1.ogg" type="video/ogg">
+</video>
+</div>
+</div>
+
+<div id="panel2">
+<div id="no1">
+<a href="index-portfilo.html"><div  class="vid1"><img src="images/portofilo.png"><br>Portofilo</div><a/>
+<a href="aa"><div  class="vid1"><img src="images/ilab.png" style="background-color:white;">Labratory</div></a>
+<a href="turning point/html_index.html"><div  class="vid1"><img src="turning point/CSS_blog/getting-anything.jpg">Change</div></a>
+</div>
+</div>
+
+
+<div id="panel3">
+<div id="no2">
+<h2>Experience</h2>
+<div>
+<h3>HGR Project</h3>
+<span>January 2015 to April 2015</span>
+<P>Graduation project The idea of converting the language of reference to voice to serve the deaf and mute segment of the disabled with a 65% success with the ambition for a future project to develop.</P>
+<h1>+</h1>
+<h3>Resturante site</h3>
+<span>February 2017</span>
+<P>Site for a restaurant specializing in Italian meals.
+</P><br><br>
+<h3>Labratory site</h3>
+<span>Mars 2018</span>
+<P>A medical lab site for tissue department to enter patient data and deliver results.
+</P>
+<h3>Wedding site</h3>
+<span>August 2018</span>
+<P>A site specializing in flowers weddings.
+</P>
+</div>
+</div>
+</div>
+<div id="panel4">
+<div id="no1"><p>dsfasdsfasdfasf</p></div>
+<div id="no2">kjdshkjfadksfalfkf</div>
+</div><br>
+
+</body>
+</html>
